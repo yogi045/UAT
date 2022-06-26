@@ -1,0 +1,45 @@
+﻿body {
+}
+.div{
+    margin-top:30px;
+}
+.div1 {
+    color: white;
+    padding-left:5px;
+    width:200px;
+    float:left;
+    background-color: #006666;
+    position:relative;
+}
+.div2 {
+    color: white;
+    width: 200px;
+    padding-left: 5px;
+    float: left;
+    margin-left: 20px;
+    display: inline;
+    background-color: #006666;
+    position: relative;
+}
+.div3 {
+    background-color: #006666;
+   /* position: absolute;*/
+}
+.div4 {
+    background-color: #006666;
+    position: absolute;
+}
+.inputbox {
+    width: 100%;
+}
+
+.clsBtn {
+    color: white;
+    padding-left: 5px;
+    background-color: #006666;
+    border: none;
+}
+
+.clsDropdown {
+    width: 100%;
+}

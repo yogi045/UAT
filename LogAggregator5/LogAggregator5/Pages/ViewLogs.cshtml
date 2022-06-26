@@ -1,0 +1,100 @@
+﻿@page
+@model ViewLogs
+@{
+    ViewData["Title"] = "View Logs";
+}
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" asp-append-version="true" />
+    <script src="~/lib/bootstrap/bootstrap.min.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="~/css/ViewLog.css" asp-append-version="true" />
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $(function() {
+                $( "#date_picker_from" ).datepicker();
+                $( "#date_picker_to" ).datepicker();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div class="divleft">
+            <div class="div1">
+                <span>Customer</span>
+            </div>
+            <div class="div2">
+                <span>Services</span>
+            </div>
+            <div class="div3">
+               <select id="drpEmpList" class="clsDropdown" asp-for="EmployeeId" asp-items="@(new SelectList(Model.EmployeesList, "Value", "Text"))">  
+                    <option value="">--Select--</option>  
+                </select>  
+            </div>
+            <div class="div4">
+                <select id="drpEmpList" class="clsDropdown" asp-for="EmployeeId" asp-items="@(new SelectList(Model.EmployeesList, "Value", "Text"))">  
+                    <option value="">--Select--</option>  
+                </select>  
+            </div>
+            <div class="div5">
+                <span>Tanents</span>
+            </div>
+            <div class="div6">
+                <select name="Cars" id="Cars" size="5">
+                    <option value="Merceders"> Merceders </option>
+                    <option value="BMW"> BMW </option>
+                    <option value="Jaguar"> Jaguar </option>
+                    <option value="Lamborghini"> Lamborghini </option>
+                    <option value="Ferrari"> Ferrari </option>
+                    <option value="Ford"> Ford </option>
+                </select>
+            </div>
+
+        </div>
+        <div class="divright">
+            <div class="div7">
+                <span>Log Duration</span>
+            </div>
+            <div></div>
+            <div class="div8">
+                <span>From:</span>
+            </div>
+            <div class="div9"><span>To:</span></div>
+            <div>
+                <input class="inputbox" type="text" id="date_picker_from">
+            </div>
+            <div>
+            <input class="inputbox" type="text" id="date_picker_to">
+            </div>
+            <div></div>
+            <div>
+                <input type="button" class="clsBtn" value="Search Logs" onclick="location.href='@Url.Action("Create", "User")'" />
+            </div>
+              <div class="div9">
+                  <span>MY Activites</span>
+              </div>
+               <div></div>
+               <div class=div6>
+                    <select name="Cars" id="Cars" size="5">
+                    <option value="Merceders"> Merceders </option>
+                    <option value="BMW"> BMW </option>
+                    <option value="Jaguar"> Jaguar </option>
+                    <option value="Lamborghini"> Lamborghini </option>
+                    <option value="Ferrari"> Ferrari </option>
+                    <option value="Ford"> Ford </option>
+                </select>
+               </div>
+        </div>
+
+    </div>
+
+</body>

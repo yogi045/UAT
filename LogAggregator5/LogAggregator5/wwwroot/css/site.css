@@ -1,0 +1,47 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.vl {
+    border-left: 2px solid darkgrey;
+    height: 500px;
+    text-align: center;
+    padding-left:50%;
+}
+
+#outer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120px;
+    display: inline;
+    float: left;
+    width: 400px;
+}
+#outer1 {
+    padding-top: 50px;
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120px;
+    width: 400px;
+    display: inline;
+    float: left;
+}
+
